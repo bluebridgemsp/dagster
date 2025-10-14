@@ -229,7 +229,7 @@ def _value_dnf(table_partition: TablePartitionDimension, data_type: str, str_val
     if str_values:
         return (table_partition.partition_expr, "=", table_partition.partitions[0])
 
-    return (table_partition.partition_expr, "=", table_partition.partitions)
+    return (table_partition.partition_expr, "=", table_partition.partitions[0])
 
 
 def _time_window_partition_dnf(
